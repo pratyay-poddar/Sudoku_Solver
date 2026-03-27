@@ -63,7 +63,7 @@ int main()
     SudokuSolver3x3 engine;
     vector<vector<char>> board(3, vector<char>(3));
 
-    cout << "Enter 3x3 Sudoku (3 rows, 3 characters each. Use 1-3 or '.')" << endl;
+    cout << "Enter 3x3 Sudoku (3 rows, 3 characters each. Use 1-9 or '.')" << endl;
 
     for (int i = 0; i < 3; i++)
     {
@@ -80,9 +80,9 @@ int main()
         for (int j = 0; j < 3; j++)
         {
             char c = line[j];
-            if (c != '.' && (c < '1' || c > '3'))
+            if (c != '.' && (c < '1' || c > '9'))
             {
-                cout << "Invalid character '" << c << "'. Only 1, 2, 3, and '.' are allowed." << endl;
+                cout << "Invalid character '" << c << "'. Only 1, 2, 3...9 and '.' are allowed." << endl;
                 return 1;
             }
             board[i][j] = c;
